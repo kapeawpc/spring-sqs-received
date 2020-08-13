@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+
+### Database ###
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_sqs
+    username: #SQL_USER_NAME
+    password: #SQL_PASSWZORD
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        ddl-auto: validate
+
+cloud:
+  aws:
+    region:
+      static: ap-southeast-1
+    credentials:
+      accessKey: #ACCESSKEY
+      secretKey: #SECRETKEY
+    stack:
+      name: Spring-Sqs
